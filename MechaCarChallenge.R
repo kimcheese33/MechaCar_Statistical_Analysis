@@ -4,7 +4,7 @@ library(dplyr)
 ########################## DELIVERABLE 1
 
 #read csv as df
-mecha_mpg_table <- read.csv(file='MechaCar_mpg.csv', check.name=F, stringsAsFactors = F)
+mecha_mpg_table <- read.csv(file='Resources/MechaCar_mpg.csv', check.name=F, stringsAsFactors = F)
 
 #multiple linear regression + summary
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=mecha_mpg_table)) 
@@ -13,7 +13,7 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 ########################## DELIVERABLE 2
 
 #read csv as df
-suspcoil_table <- read.csv(file='Suspension_Coil.csv', check.name=F, stringsAsFactors = F)
+suspcoil_table <- read.csv(file='Resources/Suspension_Coil.csv', check.name=F, stringsAsFactors = F)
 
 #create summary table
 total_summary <- suspcoil_table %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI), SD=sd(PSI), .groups = 'keep') 
